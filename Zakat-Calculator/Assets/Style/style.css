@@ -27,11 +27,11 @@
     padding: 10px;
     background-color: transparent;
     border: 1px solid #fff;
-    color: yellow;
+    color: #fff;
 }
 
 ::placeholder {
-    color: yellow;
+    color: #fff;
 }
 
 .background {
@@ -48,7 +48,7 @@
     height: 40px;
     border: 1px solid #fff;
     background-color: transparent;
-    color: yellow;
+    color: #fff;
 }
 
 #head {
@@ -59,6 +59,15 @@
     font-size: 50px;
 }
 
-.heading {
-    
+.head-saylani {
+    color: rgb(5, 234, 5);
+    text-shadow: 2px 2px 5px black;
+}
+
+.head-para {
+    text-shadow: 2px 2px 5px #000;
+}
+
+a {
+    text-align: center;
 }
