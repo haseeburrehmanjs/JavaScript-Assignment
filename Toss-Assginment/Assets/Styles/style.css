@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary : #1a1818;
+    --secondry : #ebb533;
+}
+
+#body-color {
+    background-color: var(--primary);
+}
+
+.text-color {
+    color: var(--secondry);
+}
+
+.content-box button {
+    background-color: #de9054;
+    padding: 10px;
+    width: 120px;
+    height: 46px;
+    border: none;
+    border-radius: 30px;
+}
+
+.content-box button:hover {
+    background-color: #fff;
+}  
