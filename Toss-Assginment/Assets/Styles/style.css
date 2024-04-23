@@ -26,6 +26,17 @@
     border-radius: 30px;
 }
 
+.content-box img {
+    transform: .5s ease;
+}
+
 .content-box button:hover {
     background-color: #fff;
 }  
+
+
+@media only screen and (max-width: 500px) {
+    .content-box {
+        margin-top: 100px;
+    }
+}
