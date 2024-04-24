@@ -8,7 +8,7 @@ function reset(){
 }
 
 function tossNow(recive){
-    let x = Math.ceil(Math.random(2)*2)
+    let x = Math.ceil(Math.random()*2)
     console.log(x)
     if(x === 1){
         console.log('YOU WON THE TOSS!');

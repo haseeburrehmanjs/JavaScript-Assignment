@@ -36,7 +36,7 @@
 
 
 @media only screen and (max-width: 500px) {
-    .content-box {
-        margin-top: 100px;
+    #box-top {
+        margin-top: 200px;
     }
 }
