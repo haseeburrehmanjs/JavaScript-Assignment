@@ -1,5 +1,5 @@
 let secound = document.querySelector('#secound');
-let mint = document.querySelector('#minute');
+let mint = document.querySelector('#mint');
 let hour = document.querySelector('#hour');
 
 
