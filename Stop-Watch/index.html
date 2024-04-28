@@ -13,22 +13,23 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body class="bg-dark">
+<body class="background-color">
 
-  <div class="text-center stop-watch ">
-    <div class="container">
-      <h1 class="text-light">Stop Watch</h1>
-      <h1 class="stop-watch-text text-light d-flex gap-4">
-        <span id="hour">0</span>:
-        <span id="minute">0</span>:
-        <span id="second">0</span>
+  <div class="container text-center">
+    <div class="stop-watch">
+      <h1>STOP WATCH</h1>
+    <div class="watch-text">
+      <h1>
+        <span id="hour">0</span> &nbsp;:
+        <span id="mint">0</span> &nbsp;:
+        <span id="secound">0</span>
       </h1>
     </div>
-
-    <div class="stop-watch-btn container d-flex">
-      <button onclick="startBtn()">Start</button>
-      <button onclick="stopBtn()">Stop</button>
-      <button onclick="resetBtn()">Reset</button>
+    <div class="stop-watch-btn d-flex gap-6 mx-6 mt-5">
+      <button class="btn1" onclick="startBtn()">Start</button>
+      <button class="btn2" onclick="stopBtn()">Stop</button>
+      <button class="btn3" onclick="resetBtn()">Reset</button>
+    </div>
     </div>
   </div>
 
