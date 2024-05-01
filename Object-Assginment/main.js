@@ -127,7 +127,7 @@ for (let i = 0; i < products.length; i++) {
     console.log(products[i].name);
     render.innerHTML += `
     <div class="main-container">
-    <h1>Product: ${products[i].name}</h1>
+    <h1>${products[i].name}</h1>
     <h2>Price: ${products[i].price}$</h2>
     <h3">Description: ${products[i].description}</h6>
     </div>
