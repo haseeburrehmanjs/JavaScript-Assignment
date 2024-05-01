@@ -1,6 +1,7 @@
 let secound = document.querySelector('#secound');
 let mint = document.querySelector('#mint');
 let hour = document.querySelector('#hour');
+let btn = document.querySelector('.btn12');
 
 
 let sec = 0;
@@ -9,6 +10,7 @@ let hours = 0;
 let startEntervel;
 
 function startBtn(){
+    btn.disabled = true;
     startEntervel = setInterval(function(){
         sec += 1
         console.log(sec);
@@ -29,6 +31,7 @@ function startBtn(){
 }
 
 function stopBtn() {
+    btn.disabled = false;
     clearInterval(startEntervel)
     setTimeout(sec)
 }
