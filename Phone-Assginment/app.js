@@ -6,7 +6,7 @@ let mobilePhones = [
         model: "A2730"
     },
     {
-        name: "Samsung Galaxy Z Fold 4",
+        name: "Samsung Galaxy Z ",
         price: 1799.99,
         description: "The Galaxy Z Fold 4 unfolds into a large immersive display, offering multitasking capabilities and a versatile camera system.",
         model: "SM-F926"
@@ -128,26 +128,30 @@ for (let i = 0; i < mobilePhones.length; i++) {
     // console.log(mobilePhones[i]);
     card.innerHTML += `
     <div>
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h5 class="card-title">${mobilePhones[i].name}</h5>
-    <h5 class="card-subtitle mb-2 text-muted">Price : ${mobilePhones[i].price}</h5>
-    <p class="card-text">${mobilePhones[i].description}</p>
-    <button onclick='addToCard(${i})' class="btn btn-warning">Add to Card</button>
+    <div class="card">
+    <div class="card-img"><div class="img"></div></div>
+    <div class="card-title">${mobilePhones[i].name}</div>
+    <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <hr class="card-divider">
+    <div class="card-footer">
+        <div class="card-price"><span>$</span>${mobilePhones[i].price}</div>
+        <button class="card-btn" onclick="addToCard(${i})">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z"></path><path d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z"></path><path d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z"></path></svg>
+        </button>
     </div>
-    </div>
+</div>
     </div>
     `
 }
 
 let addCard = []
 
-function addToCard(index){
+function addToCard(index) {
     // console.log(mobilePhones[index]);
-    if(addCard.includes(mobilePhones[index])){
+    if (addCard.includes(mobilePhones[index])) {
         mobilePhones[index].Quantity += 1;
         console.log(addCard);
-    }else {
+    } else {
         mobilePhones[index].Quantity = 1;
         addCard.push(mobilePhones[index])
         console.log(addCard);
