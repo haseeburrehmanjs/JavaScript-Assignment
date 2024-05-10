@@ -3,7 +3,9 @@ let mobilePhones = [
         name: "iPhone 14 Pro Max",
         price: 1299.00,
         description: "The iPhone 14 Pro Max features a larger Super Retina XDR display, an enhanced camera system with improved low-light performance, and the latest A16 Bionic chip.",
-        model: "A2730"
+        model: "A2730",
+        image: (src =
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVRE5yhqQNEC-k-pjXRm3MWfxII6UVZXStDen-vs813r4myrT6RqA3KV38_3LB6c2arg&usqp=CAU")
     },
     {
         name: "Samsung Galaxy Z ",
@@ -129,7 +131,7 @@ for (let i = 0; i < mobilePhones.length; i++) {
     card.innerHTML += `
     <div>
     <div class="card">
-    <div class="card-img"><div class="img"></div></div>
+    <div class="card-img"><div class="img"><img src="${mobilePhones[i].im}" alt=""></div></div>
     <div class="card-title">${mobilePhones[i].name}</div>
     <div class="card-subtitle">Product description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     <hr class="card-divider">
