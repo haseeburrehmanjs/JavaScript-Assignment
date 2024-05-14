@@ -5,10 +5,10 @@
 }
 
 :root {
-    --primary : #4C4B16;
-    --secondry : #898121;
-    --SecondLast : #E7B10A;
-    --last : #F7F1E5;
+    --primary: #4C4B16;
+    --secondry: #898121;
+    --SecondLast: #E7B10A;
+    --last: #F7F1E5;
 }
 
 #BODY {
@@ -51,4 +51,23 @@
     padding-left: 42px;
     padding-right: 42px;
     margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .box-size {
+        width: 300px;
+        /* height: 600px; */
+        background-color: var(--last);
+        margin: 0 auto;
+    }
+
+    .box-size input {
+        width: 100px;
+        height: 46px;
+        padding: 10px;
+        border: 10px;
+        outline: none;
+        border-radius: 2px;
+    }
 }
