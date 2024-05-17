@@ -11,7 +11,7 @@ function renderScreen() {
             ${addTodo[i]}
            <div>
            <button onclick='deleteTodo(${i})'>Delete</button>
-           <button onclick="editTodo()">Edit</button>
+           <button onclick="editTodo(${i})">Edit</button>
            </div>
         </li>
         `
@@ -35,6 +35,7 @@ function deleteTodo(index) {
 }
 
 function editTodo(index){
-    addTodo.splice(index, 1, prompt('Ubdate List'))
+    let ubdateValue = prompt('Ubdate List')
+    addTodo.splice(index,1,ubdateValue)
     renderScreen()
 }
