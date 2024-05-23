@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    background: url(./pexels-photo-301920.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.FormBox {
+    width: 500px;
+    height: 500px;
+    /* background-color: #fff; */
+    border: 1px solid green;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30PX;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.FormBox input {
+    width: 400px;
+    height: 48px;
+    border-radius: 50px;
+    background-color: darkcyan;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: yellow;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.FormBox button {
+    width: 120px;
+    height: 48px;
+    background-color: green;
+    border-radius: 50px;
+    color: yellow;
+    border: 0;
+    outline: 0;
+}
+
+.FormBox button:hover {
+    border: 1px solid black;
+}
