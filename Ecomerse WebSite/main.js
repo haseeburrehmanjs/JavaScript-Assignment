@@ -42,7 +42,7 @@ let products = [
     {
         ProductName: 'Ring',
         price: 200,
-        Image: src = "./images/p1.png"
+        Image: src = "./images/p8.png"
     },
 ]
 
@@ -67,6 +67,14 @@ function render(){
 }
 render()
 
+let addItems;
+let items = JSON.parse(localStorage.getItem('sendData'));
+if (items === null) {
+    addItems = [];
+} else {
+    addItems = items;
+}
+
 let cardArry = []
 
 function addToCard(i){
@@ -79,4 +87,9 @@ function addToCard(i){
         cardArry.push(products[i])
         console.log(cardArry);
     }
+}
+
+function checkOut(){
+    localStorage.setItem('sendData', JSON.stringify(cardArry))
+    window.location = 'cart.html'
 }

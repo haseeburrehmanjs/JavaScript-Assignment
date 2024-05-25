@@ -112,6 +112,14 @@ body a {
     margin-top: 10px;
 }
 
+.checkOutbtn button {
+    width: 120px;
+    height: 46px;
+    background-color: var(--pink);
+    border: 0;
+    outline: 0;
+    color: #fff;
+}
 
 
 
@@ -132,6 +140,10 @@ body a {
 
 
 
-@media only screen and (max-width: 450px) {
-    
+@media only screen and (max-width: 500px) {
+    .card-box {
+        width: 180px;
+        height: 330px;
+        background-color: var(--card);
+    }
 }

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #f9ece6;
+    --pink: #e83e8c;
+    --pink-light: #f89cab;
+    --red: #dc3545;
+    --card : #eeeeee;
+}
+
+/* CARD SECTION CSS */
+
+.bg-color {
+    background-color: var(--pink-light);
+}
+
+.card-box2 {
+    width: 100%;
+    height: 300px;
+    color: var(--card);
+}
