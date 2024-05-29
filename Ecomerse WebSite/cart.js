@@ -3,6 +3,8 @@ let getItems = JSON.parse(localStorage.getItem('sendData'))
 
 let cardSection = document.querySelector('#cardsection')
 let h2 = document.querySelector('h2')
+let h3 = document.querySelector('h3')
+
 
 function rednerItems() {
     if (getItems != null && getItems.length > 0) {
@@ -17,11 +19,12 @@ function rednerItems() {
             <p class="card-text">PRICE $${getItems[i].price}</p>
             <div class='d-flex justify-content-between'>
             <p class="btn btn-danger" onclick='removeBtn(${i})'>Delete</p>
-            <p id='quantity'><span class='btn btn-danger' onclick='lessBtn(${i})'>-</span> ${getItems[i].quantity} <span class='btn btn-danger' onclick='addQuantity(${i})'>+</span></p>
+            <p id='quantity'><span class='btn btn-danger' onclick='lessQuantity(${i})'>-</span> ${getItems[i].quantity} <span class='btn btn-danger' onclick='addQuantity(${i})'>+</span></p>
             </div>
             </div>
             </div>`
         }
+        // h3.innerHTML = `Total Amount: ${total}`
     } else {
         h2.innerHTML = 'No Items Found.....'
     }
@@ -29,24 +32,37 @@ function rednerItems() {
 rednerItems()
 
 function removeBtn(i) {
-    getItems.splice(i, 1)
+    getItems.splice(i,1)
     localStorage.setItem('sendData', JSON.stringify(getItems))
     location.reload()
 }
 
-function lessBtn(i) {
-    if(getItems[i].quantity > 0){
+function lessQuantity(i) {
+    cardSection.innerHTML = ''
+    if (getItems[i].quantity <= 1) {
+        getItems.splice(i, 1)
+    } else {
         getItems[i].quantity -= 1
-        localStorage.setItem('sendData', JSON.stringify(getItems))
-        location.reload()
-    }else {
-        removeBtn(i)
     }
+    rednerItems()
 }
 
+function addQuantity(i){
+    cardSection.innerHTML = ''
+    getItems[i].quantity += 1
+    rednerItems()
+    totalAmount()
+}
 
+let total;
 
-
+function totalAmount(){
+    for(let j = 0; j < getItems.length; j++){
+        total = getItems[j].quantity * getItems[j].price
+    }
+    h3.innerHTML = `TOTAL AMOUNT : ${total}`
+}
+totalAmount()
 
 
 

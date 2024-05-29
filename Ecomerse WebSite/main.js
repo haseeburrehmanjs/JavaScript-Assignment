@@ -1,12 +1,12 @@
 let products = [
     {
         ProductName: 'Ring',
-        price: 200,
+        price: 199,
         Image: src = "./images/p1.png"
     },
     {
         ProductName: 'Watch',
-        price: 300,
+        price: 90,
         Image: src = "./images/p7.png"
     },
     {
@@ -31,12 +31,12 @@ let products = [
     },
     {
         ProductName: 'Watch',
-        price: 400,
+        price: 599,
         Image: src = "./images/p7.png"
     },
     {
         ProductName: 'Ring',
-        price: 200,
+        price: 299,
         Image: src = "./images/p8.png"
     },
     {
@@ -46,7 +46,7 @@ let products = [
     },
     {
         ProductName: 'wall clock',
-        price: 400,
+        price: 999,
         Image: src = "./images/wallclock.png"
     },
 ]
