@@ -231,10 +231,14 @@ let card = document.querySelector('#card-section')
 products.map(item => {
     // console.log(item);
     card.innerHTML += `
-    <h1>${item.brand} ${item.name}</h1>
-    <h1>PRICE : ${item.price}</h1>
-    <h1>CATEGORY : ${item.category}</h1>
-    <hr />
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">CATEGORY : ${item.category}</div>
+                <div class="card-body">
+                  <h5 class="card-title">PRICE : ${item.price}</h5>
+                  <h5 class="card-title">${item.brand} ${item.name}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
     `
 })
 
@@ -243,11 +247,15 @@ function filterdItems(btn) {
     console.log(btn.textContent);
     let filterdItems = products.filter(item => item.category === btn.innerHTML).map(item => {
         card.innerHTML += `
-        <h1>${item.brand} ${item.name}</h1>
-        <h1>PRICE : ${item.price}</h1>
-        <h1>CATEGORY : ${item.category}</h1>
-        <hr />
-        ` 
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">CATEGORY : ${item.category}</div>
+                <div class="card-body">
+                  <h5 class="card-title">PRICE : ${item.price}</h5>
+                  <h5 class="card-title">${item.brand} ${item.name}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+    `
         return item
     })
     console.log(filterdItems);
@@ -258,10 +266,14 @@ function allItems(){
     products.map(item => {
         // console.log(item);
         card.innerHTML += `
-        <h1>${item.brand} ${item.name}</h1>
-        <h1>PRICE : ${item.price}</h1>
-        <h1>CATEGORY : ${item.category}</h1>
-        <hr />
-        `
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">CATEGORY : ${item.category}</div>
+                <div class="card-body">
+                  <h5 class="card-title">PRICE : ${item.price}</h5>
+                  <h5 class="card-title">${item.brand} ${item.name}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+    `
     })
 }

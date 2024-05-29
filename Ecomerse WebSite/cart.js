@@ -1,29 +1,56 @@
-let cardsection = document.querySelector('.cardsection')
-let h2 = document.querySelector('h2') 
+let getItems = JSON.parse(localStorage.getItem('sendData'))
+// console.log(getItems);
 
-let GetLocalData = JSON.parse(localStorage.getItem('sendData'))
-console.log(GetLocalData);
+let cardSection = document.querySelector('#cardsection')
+let h2 = document.querySelector('h2')
 
-function checkOutSection(){
-    if(GetLocalData != null && GetLocalData.length > 0){
-        for(let i = 0; i < GetLocalData.length; i++){
-            cardsection.innerHTML +=  `
-            <div class="card-box2 p-3">
-                <div class="newTag d-flex justify-content-center align-items-center"><h6>New</h6></div>
-                <div class="mt-2 d-flex justify-content-center">
-                <img src="${GetLocalData[i].Image}">
-                </div>
-                <div class="price-card d-flex justify-content-between mt-5">
-                <h5>${GetLocalData[i].ProductName}</h5>
-                <h5>Price: <span class="price">$${GetLocalData[i].price}</span></h5>
-                </div>
-                <h5>Quantity : ${GetLocalData[i].quantity}</h5>
+function rednerItems() {
+    if (getItems != null && getItems.length > 0) {
+        for (let i = 0; i < getItems.length; i++) {
+            cardSection.innerHTML += `
+            <div class="card" style="width: 18rem;">
+            <div class="text-center mt-3">
+            <img class="card-img-top" src="${getItems[i].Image}" alt="Card image cap">
             </div>
-            `
+            <div class="card-body">
+            <h5 class="card-title">PRODUCT NAME : ${getItems[i].ProductName}</h5>
+            <p class="card-text">PRICE $${getItems[i].price}</p>
+            <div class='d-flex justify-content-between'>
+            <p class="btn btn-danger" onclick='removeBtn(${i})'>Delete</p>
+            <p id='quantity'><span class='btn btn-danger' onclick='lessBtn(${i})'>-</span> ${getItems[i].quantity} <span class='btn btn-danger' onclick='addQuantity(${i})'>+</span></p>
+            </div>
+            </div>
+            </div>`
         }
-    }else {
-        console.log('CART EMPTY HA MALIK');
-        h2.innerHTML = 'Cart not found...'
+    } else {
+        h2.innerHTML = 'No Items Found.....'
     }
 }
-checkOutSection()
+rednerItems()
+
+function removeBtn(i) {
+    getItems.splice(i, 1)
+    localStorage.setItem('sendData', JSON.stringify(getItems))
+    location.reload()
+}
+
+function lessBtn(i) {
+    if(getItems[i].quantity > 0){
+        getItems[i].quantity -= 1
+        localStorage.setItem('sendData', JSON.stringify(getItems))
+        location.reload()
+    }else {
+        removeBtn(i)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

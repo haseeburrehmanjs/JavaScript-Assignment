@@ -18,8 +18,6 @@
     background-color: var(--pink-light);
 }
 
-.card-box2 {
-    width: 100%;
-    height: 300px;
-    color: var(--card);
+.card img {
+    width: 130px;
 }

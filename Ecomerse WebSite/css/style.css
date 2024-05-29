@@ -113,8 +113,9 @@ body a {
 }
 
 .checkOutbtn button {
-    width: 120px;
+    width: 180px;
     height: 46px;
+    border-radius: 5px;
     background-color: var(--pink);
     border: 0;
     outline: 0;
