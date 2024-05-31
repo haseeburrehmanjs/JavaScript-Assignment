@@ -40,21 +40,31 @@ function addQuantity(i) {
     cardSection.innerHTML = ''
     getItems[i].quantity += 1
     render()
+    totalAmount()
 }
 
 function lessQuantity(i) {
-    if (getItems[i].quantity = 1) {
-        getItems.splice(i, 1)
-        localStorage.setItem('sendData', JSON.stringify(getItems))
-    } else {
+    if(getItems[i].quantity <= 1){
+        deleteCard(i)
+        totalAmount()
+    }else{
         cardSection.innerHTML = ''
         getItems[i].quantity -= 1
-        render()
+        render() 
+        totalAmount()
     }
 }
 
-
-
+let totalPrice;
+function totalAmount(){
+    for(let i = 0; i < getItems.length; i++){
+        totalPrice = (getItems[i].quantity * getItems[i].price)
+    }
+    h3.innerHTML = `
+    Total Amount : ${totalPrice}
+    `
+}
+totalAmount()
 
 
 
