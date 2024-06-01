@@ -4,11 +4,77 @@
     box-sizing: border-box;
 }
 
+:root {
+    --light: #f9ece6;
+    --pink: #e83e8c;
+    --pink-light: #f89cab;
+    --red: #dc3545;
+    --card : #eeeeee;
+    --saveing : #7fd7eb;
+    --savebtn : #109dbd;
+    --giftsection : #6929a5;
+    --giftBtn : #9242dd;
+}
+
+
 #addBtn:hover {
     background-color: transparent;
     border: 1px solid #0d36dd;
     color: #0d36dd;
     transition: .6s ease;
+}
+
+/* SHOP WITH US SECTION CSS */
+
+.shopWithUs {
+    width: 350px;
+    height: 220px;
+    border-radius: 5px;
+    background-color: var(--card);
+}
+
+.shopWithUs:hover {
+    box-shadow: 2px 2px 10px var(--pink);
+}
+
+/* HEADER SECTION */
+
+.header-section {
+    width: 100%;
+    height: 500%;
+    background-color: #113cea;
+}
+
+.text {
+    font-size: 65px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.text2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+.text-two {
+    font-size: 18px;
+    font-weight: 400;
+}
+/* 
+.header-sectiond div>button {
+    width: 150px;
+    height: 48px;
+    color: #fff;
+    background-color: var(--pink);
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    margin-top: 30px;
+} */
+
+.hidden-icon i {
+    font-size: 30px;
 }
 
 
