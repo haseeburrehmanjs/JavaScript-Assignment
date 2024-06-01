@@ -12,6 +12,8 @@
     --card : #eeeeee;
     --saveing : #7fd7eb;
     --savebtn : #109dbd;
+    --giftsection : #6929a5;
+    --giftBtn : #9242dd;
 }
 
 body a {
@@ -177,6 +179,14 @@ body a {
     height: 220px;
     border-radius: 5px;
     background-color: var(--card);
+}
+
+/* GIFT SECTION CSS */
+
+.giftSection {
+    width: 100%;
+    height: 600px;
+    background-color: var(--giftsection);
 }
 
 
