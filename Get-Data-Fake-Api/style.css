@@ -77,6 +77,12 @@
     font-size: 30px;
 }
 
+.btngift:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    
+}
+
 
 @media only screen and (max-width: 450px) {
     .carousel-item img{
