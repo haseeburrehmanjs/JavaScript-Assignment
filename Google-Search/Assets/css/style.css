@@ -36,30 +36,41 @@
 
 
 div img {
-    width: 30%;
+    width: 20%;
     margin-top: 100px;
 }
 
 .search-input {
-    width: 500px;
-    height: 48px;
+    width: 600px;
+    height: 45px;
     outline: 0;
     border-radius: 50px;
     padding: 15px;
     padding-left: 42px;
-    border: 1px solid #000;
+    border: 1px solid #d2d2d2;
+}
+
+.search-input:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .search-icon {
     width: 30px;
     position: relative;
-    top: -37px;
+    top: -42px;
     left: 40px;
 }
 
 .mic-icon {
     width: 30px;
     position: relative;
-    top: -37px;
-    right: 40px; 
+    top: -42px;
+    right: 70px; 
+}
+
+.image-icon {
+    width: 35px;
+    position: relative;
+    top: -42px;
+    right: 75px; 
 }

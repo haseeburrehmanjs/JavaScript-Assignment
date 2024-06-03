@@ -28,7 +28,7 @@ function filtrdBtn(btn){
         console.log(btn.innerHTML)
         let filterdItem = responce.data.filter(item => item.category === btn.textContent)
         console.log(filterdItem)
-        filterdItem.map(item => {
+        filterdItem.map((item,index) => {
             card.innerHTML += `
             <div class="card p-2" style="width: 18rem; ">
             <img width='300' height='300' src="${item.image}" class="card-img-top" alt="...">
@@ -36,7 +36,7 @@ function filtrdBtn(btn){
             <h5 class="card-title">Category : ${item.category}</h5>
             <h5 class="card-title">Rating : ${item.rating.rate} Count : ${item.rating.count}</h5>
             <p class="card-text">Price : $${item.price}</p>
-            <a id='addBtn' class="btn btn-primary">Add To Card</a>
+            <a id='addBtn' class="btn btn-primary" onclick='addToCard(${index})'>Add To Card</a>
             </div>
             </div>`
         })
@@ -51,7 +51,7 @@ function allItems(){
     axios('https://fakestoreapi.com/products')
     .then(responce => {
         console.log(responce.data);
-        responce.data.map((item) => {
+        responce.data.map((item,index) => {
             card.innerHTML += `
             <div class="card p-2" style="width: 18rem; ">
             <img width='300' height='300' src="${item.image}" class="card-img-top" alt="...">
@@ -59,7 +59,7 @@ function allItems(){
             <h5 class="card-title">Category : ${item.category}</h5>
             <h5 class="card-title">Rating : ${item.rating.rate} Count : ${item.rating.count}</h5>
             <p class="card-text">Price : $${item.price}</p>
-            <a id='addBtn' class="btn btn-primary" onclick='addToCard()'>Add To Card</a>
+            <a id='addBtn' class="btn btn-primary" onclick='addToCard(${index})'>Add To Card</a>
             </div>
             </div>`
         })
