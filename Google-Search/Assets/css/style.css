@@ -36,8 +36,8 @@
 
 
 div img {
-    width: 20%;
-    margin-top: 100px;
+    width: 25%;
+    margin-top: 120px;
 }
 
 .search-input {
@@ -57,20 +57,33 @@ div img {
 .search-icon {
     width: 30px;
     position: relative;
-    top: -42px;
+    top: -47px;
     left: 40px;
 }
 
 .mic-icon {
     width: 30px;
     position: relative;
-    top: -42px;
+    top: -47px;
     right: 70px; 
 }
 
 .image-icon {
     width: 35px;
     position: relative;
-    top: -42px;
+    top: -47px;
     right: 75px; 
+}
+
+.btn-google {
+    width: 150px;
+    height: 48px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+}
+
+.btn-google:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

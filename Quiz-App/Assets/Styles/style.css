@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: 
+}
+
+.Quiz-navbar{
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+}
+
+.from-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form input {
+    width: 300px;
+    height: 48px;
+    padding: 10px;
+}
+
+#registor-page {
+    font-size: 12px;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+.registor-btn {
+    width: 150px;
+    height: 48px;
+    background-color: blue;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+}
