@@ -23,7 +23,9 @@ form.addEventListener('submit', event => {
     if (getData[0].email === email.value && getData[0].Password === Password.value) {
         alert('Login SuccesFull')
         window.location = 'quiz.html'
-    } else {
-        alert('Please Check Email And Password')
+    } else if (getData[0].email === email.value) {
+        alert('Register Yourself!')
+    }else {
+        alert('Please Check y')
     }
 })
