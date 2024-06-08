@@ -7,13 +7,29 @@ let Password = document.querySelector('#password')
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 let passwordRegex = /^[a-zA-Z0-9!@#$%^&*()_+]{8,15}$/
 
+// PASSWORD VISIBILITY
+function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
 // USER REGISTOR DATA
 let registorData = []
 let localData;
 
+let checkDetails = ()=> {
+    if(getData[0].email === email.value){
+        alert('this email is already registor ')
+    }
+}
+
+// SEND LOCALSTORAGE
 function PushData() {
     localData = localStorage.setItem('sendData', JSON.stringify(registorData))
-    console.log(localData);
 }
 
 form.addEventListener('submit', event => {
@@ -24,10 +40,13 @@ form.addEventListener('submit', event => {
             email: email.value,
             Password: Password.value,
         })
+        alert('Registor SuccesFull')
+        // window.location = 'index.html'
         PushData()
-    } else {
+    }else {
         alert('Password Pattern Incorrect');
     }
+
 })
 
 
